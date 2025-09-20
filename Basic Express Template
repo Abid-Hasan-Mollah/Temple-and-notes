@@ -22,6 +22,7 @@ app.use(express.json());              // JSON body পার্স করার 
 app.use(cors());                      // অন্য domain থেকে request allow
 app.use(cookieParser());              // Cookie handle করার জন্য
 app.use(morgan("dev"));               // Request log দেখার জন্য
+app.use(express.urlencoded({ extended: true }));
 
 // =========================
 // Database Connection
